@@ -1,5 +1,5 @@
 {% set name = "immutabledict" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,20 +7,20 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a768690210d107d5a479a5edf9e09e70db7cfbe6aee45c82b5799f82b43bf739
+  sha256: 0341ee9cc84cb318fe06aa25c89d27e2564463924063d3f5e976fd0fa207849a
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
     - poetry
   run:
-    - python
+    - python >=3.6
 
 test:
   imports:
@@ -31,7 +31,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'A fork of frozendict, an immutable wrapper around dictionaries.'
+  summary: A fork of frozendict, an immutable wrapper around dictionaries.
 
 extra:
   recipe-maintainers:
