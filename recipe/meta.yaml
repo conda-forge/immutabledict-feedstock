@@ -1,5 +1,5 @@
 {% set name = "immutabledict" %}
-{% set version = "2.2.2" %}
+{% set version = "2.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 963151044f1ea81151f4b7f381fbf251992db33cb9acc20811168e598aa35e27
+  sha256: 0e1e8a3f2b3ff062daa19795f947e9ec7a58add269d44e34d3ab4319e1343853
 
 build:
   noarch: python
